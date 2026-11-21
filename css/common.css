@@ -360,7 +360,7 @@ footer a:focus-visible {
 @media screen and (max-width: 1024px) {
     header.wrapper {
         padding-inline: 20px;
-        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.8);
         box-shadow: none;
     }
 
