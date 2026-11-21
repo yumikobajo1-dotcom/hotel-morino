@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+/* * {
+    border: 1px solid red;
+} */
+
+/* 写真 */
+.photo-section {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.photo-section>img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 写真の上の文字 */
+.photo-caption-left,
+.photo-caption-right {
+    position: absolute;
+    bottom: 4%;
+    color: #d7d6d6;
+}
+
+/* 左下に配置 */
+.photo-caption-left {
+    left: 4%;
+    text-align: left;
+}
+
+/* 右下に配置 */
+.photo-caption-right {
+    right: 4%;
+    text-align: right;
+}
+
+/* 英語表記 */
+.photo-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0 0 6px;
+    font-size: clamp(10px, 1.25vw, 18px);
+}
+
+/* ライン */
+.photo-label::before {
+    content: "";
+    display: block;
+    width: clamp(50px, 7vw, 100px);
+    height: 1px;
+    flex-shrink: 0;
+    background-color: currentColor;
+}
+
+/* 左側：英語の右にライン */
+.photo-caption-left .photo-label::before {
+    order: 1;
+}
+
+/* 右側：英語の左にライン */
+.photo-caption-right .photo-label {
+    justify-content: flex-end;
+}
+
+/* 日本語タイトル */
+.photo-title {
+    margin: 0;
+    font-size: clamp(14px, 1.8vw, 24px);
+}
+
+/* facilities-item */
+.facilities .photo-section {
+    margin-bottom: 16px;
+}
+
+.facilities {
+    margin-top: 0;
+}
+
+.facilities-list {
+    display: flex;
+    align-items: flex-start;
+}
+
+.facilities-item-left {
+    margin-right: 40px;
+}
+
+.facilities-item-img {
+    display: block;
+    width: 600px;
+}
+
+.facilities-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* facilities-item 英語表記 */
+.facilities-item .photo-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0 0 6px;
+    font-size: clamp(8px, 1.25vw, 14px);
+}
+
+/* facilities-item 日本語タイトル */
+.facilities-item .photo-title {
+    margin: 0;
+    font-size: clamp(14px, 1.8vw, 20px);
+}
+
+/* 施設写真：英字と日本語の間にライン */
+.facilities-item .photo-label {
+    display: block;
+}
+
+/* 今までの英字横のラインを消す */
+.facilities-item .photo-label::before {
+    content: none;
+}
+
+/* 英字の下にラインを入れる */
+.facilities-item .photo-label::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    margin-top: 6px;
+    background-color: currentColor;
+}
+
+/* 右側の文字はラインも右寄せ */
+.facilities-item .photo-caption-right .photo-label::after {
+    margin-left: auto;
+}
+
+.page-intro .top-reserve {
+    padding-block: 60px;
+}
+
+/* pictureに切り替えた写真もPCでは元と同じ幅 */
+.photo-section>picture,
+.photo-section>picture>img {
+    display: block;
+    width: 100%;
+}
+
+/* SP TOPページ */
+@media screen and (max-width: 767px) {
+    .photo-section {
+        margin-bottom: 40px;
+    }
+
+    .photo-caption-left,
+    .photo-caption-right {
+        bottom: 6%;
+    }
+
+    .photo-label {
+        font-size: 11px;
+    }
+
+    .photo-title {
+        font-size: 16px;
+    }
+
+    .photo-label::before {
+        width: 50px;
+    }
+
+    .facilities .photo-section {
+        margin-bottom: 24px;
+    }
+
+    .facilities-list {
+        display: block;
+        padding: 0;
+    }
+
+    .facilities-item-left {
+        margin-right: 0;
+    }
+
+    .facilities-item {
+        margin-bottom: 24px;
+    }
+
+    .facilities-item-img {
+        width: 100%;
+    }
+
+    /* SPのみ：館内施設4枚の文字を写真の中央に配置 */
+    .facilities-item .photo-caption-left,
+    .facilities-item .photo-caption-right {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+
+    .facilities-item .photo-label {
+        font-size: 11px;
+    }
+
+    .facilities-item .photo-title {
+        font-size: 15px;
+    }
+
+    /* SPのみ：館内施設の文字下のラインも中央に配置 */
+    .facilities-item .photo-label::after {
+        width: 80px;
+        margin-inline: auto;
+    }
+
+    .top-reserve {
+        margin-block: 72px;
+    }
+
+    .top-reserve .page-intro-title {
+        font-size: 17px;
+    }
+}

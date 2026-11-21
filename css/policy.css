@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+/* ポリシーページ共通：既存ページには影響させない */
+.policy-main {
+    padding: 180px 30px 0;
+}
+
+/* 英字見出しと日本語タイトル */
+.policy-heading {
+    margin-bottom: 64px;
+}
+
+.policy-heading .section-heading-en {
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.policy-heading .section-heading-en::after {
+    margin: 8px auto;
+}
+
+.policy-heading .section-heading-ja {
+    font-size: 18px;
+}
+
+/* 本文全体の幅・中央配置 */
+.policy-content {
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.policy-intro {
+    margin-bottom: 56px;
+}
+
+/* 各項目 */
+.policy-section {
+    margin-bottom: 40px;
+}
+
+.policy-section-title {
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #6e6e6e;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.policy-section p + p {
+    margin-top: 12px;
+}
+
+/* 利用目的のリスト：共通CSSで消した箇条書きをここだけ表示 */
+.policy-list {
+    padding-left: 24px;
+    margin: 16px 0;
+}
+
+.policy-list li {
+    list-style: disc;
+    margin-bottom: 8px;
+}
+
+/* キャンセル料金表 */
+.policy-table {
+    width: 100%;
+    margin: 24px 0 12px;
+    border-collapse: collapse;
+}
+
+.policy-table caption {
+    margin-bottom: 12px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.policy-table th,
+.policy-table td {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #6e6e6e;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.policy-table thead th {
+    background-color: #1a1a1a;
+}
+
+.policy-table tbody th {
+    font-weight: normal;
+}
+
+.policy-table strong {
+    font-size: 26px;
+}
+
+.policy-note {
+    font-size: 14px;
+}
+
+/* 連絡先 */
+.policy-contact {
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #6e6e6e;
+}
+
+.policy-contact-name {
+    font-weight: bold;
+}
+
+/* 架空サイトであることの注記 */
+.policy-demo-note {
+    margin-top: 48px;
+    font-size: 13px;
+}
+
+/* 戻るボタン */
+.policy-back {
+    margin-top: 56px;
+}
+
+.policy-back a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 300px;
+    max-width: 100%;
+    padding: 16px 24px;
+    margin: 0 auto;
+    border: 1px solid #d7d6d6;
+    transition: background-color 0.2s ease-out;
+}
+
+.policy-back a:hover,
+.policy-back a:focus-visible {
+    background-color: #333;
+}
+
+/* この2ページのみ、本文とフッターの間隔を調整 */
+.policy-page footer {
+    margin-top: 160px;
+}
+
+/* SP ポリシーページ */
+@media screen and (max-width: 767px) {
+    .policy-main {
+        padding: 144px 24px 0;
+    }
+    .policy-heading {
+        margin-bottom: 40px;
+    }
+    .policy-heading .section-heading-en {
+        font-size: 22px;
+        overflow-wrap: anywhere;
+    }
+    .policy-heading .section-heading-ja {
+        font-size: 16px;
+    }
+    .policy-content {
+        font-size: 14px;
+    }
+    .policy-intro {
+        margin-bottom: 40px;
+    }
+    .policy-intro br {
+        display: none;
+    }
+    .policy-section-title {
+        font-size: 18px;
+    }
+    .policy-table th,
+    .policy-table td {
+        padding: 16px 8px;
+        font-size: 13px;
+    }
+    .policy-table strong {
+        font-size: 22px;
+    }
+    .policy-note {
+        font-size: 12px;
+    }
+    .policy-demo-note {
+        font-size: 12px;
+    }
+    .policy-page footer {
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+/* * {
+    border: 1px solid red;
+} */
+
+.room-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.room-images {
+    width: 60%;
+    min-width: 0;
+}
+
+.room-content {
+    width: 35%;
+    padding-inline: 60px;
+}
+
+.room-images .slick-slide {
+    margin: 0 30px;
+}
+
+.room-images .slick-list {
+    margin: 0 -30px;
+}
+
+.room-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.room-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.room-info dt {
+    width: 20%;
+}
+
+.room-info dd {
+    width: 80%;
+    margin: 0;
+}
+
+.room-reserve-btn p {
+    margin: 0;
+    font-size: clamp(16px, 1.25vw, 22px);
+}
+
+.room-reserve-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #d7d6d6;
+    color: #d7d6d6;
+}
+
+/* 文言の右側の三角 */
+.room-reserve-btn a::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid currentColor;
+}
+
+.room-description {
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.list-left {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.amenities-list_01,
+.amenities-list_02 {
+    display: flex;
+}
+
+/* 左右の列 */
+.amenities-list-left,
+.amenities-list-right {
+    width: 50%;
+}
+
+/* アイコンと名前を1組ずつ折り返す */
+.amenities-list-left dl,
+.amenities-list-right dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* アイコン */
+.amenities .icon {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    margin-bottom: 16px;
+}
+
+.amenities .icon img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* アイコンの右の縦ライン */
+.amenities .icon::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    margin-left: 15px;
+    background-color: currentColor;
+    flex-shrink: 0;
+}
+
+/* リスト名 */
+.amenities .list-name {
+    width: calc(100% - 50px);
+    margin: 0 0 16px;
+}
+
+/* 最初は隠す */
+.amenities-more {
+    display: none;
+}
+
+/* 開閉ボタン */
+.amenities-toggle {
+    display: block;
+    margin-top: 32px;
+    padding: 16px 24px;
+    border: 1px solid #d7d6d6;
+    border-radius: 12px;
+    color: #d7d6d6;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* 開いているときのボタン */
+.amenities-toggle.is-open {
+    margin: 24px auto 0;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.reservation-banner {
+    background-image:
+        linear-gradient(rgba(37, 56, 85, 0.3), rgba(37, 56, 85, 0.3)),
+        url("../img/pc_room-page-images/morino-night-hotel-cta.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 30px;
+    text-align: center;
+    width: 800px;
+    margin: 80px auto;
+}
+
+.reservation-banner-text {
+    margin-bottom: 40px;
+}
+
+/* SPデザイン用のアメニティ写真 */
+.room-list {
+    overflow: hidden;
+}
+
+.amenities-photo {
+    display: none;
+}
+
+/* 中間幅では、スライドの負の余白で横スクロールさせない */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .room-images {
+        overflow: hidden;
+    }
+    .room-content {
+        padding-inline: 24px;
+    }
+    .room-reserve-btn a {
+        padding-inline: 10px;
+        gap: 8px;
+    }
+    .room-reserve-btn p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .room-item,
+    .room-item.list-left {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 64px;
+    }
+    .room-images {
+        width: 100%;
+        padding-right: 36px;
+        overflow: hidden;
+    }
+    .room-images .slick-list {
+        margin: 0;
+        overflow: visible;
+    }
+    .room-images .slick-slide {
+        margin: 0 24px 0 0;
+    }
+    .room-images picture,
+    .room-images img {
+        display: block;
+        width: 100%;
+    }
+    .room-content {
+        width: 100%;
+        padding: 32px 40px 0;
+    }
+    .room-title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .room-info {
+        margin-bottom: 28px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+    .room-info dt {
+        width: 22%;
+    }
+    .room-info dd {
+        width: 78%;
+    }
+    .room-reserve-btn p {
+        font-size: 14px;
+    }
+    .room-reserve-btn a {
+        padding: 12px;
+    }
+    .room-description {
+        margin-top: 28px;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+    .room-list + .section-heading {
+        margin-bottom: 32px;
+    }
+    .room-list + .section-heading .section-heading-en {
+        max-width: 270px;
+        margin: 0 auto;
+    }
+    .amenities-photo {
+        display: block;
+        margin-bottom: 52px;
+    }
+    .amenities-photo img {
+        display: block;
+        width: 100%;
+    }
+    .amenities-list_01,
+    .amenities-list_02 {
+        flex-direction: column;
+    }
+    .amenities-list-left,
+    .amenities-list-right {
+        width: 100%;
+    }
+    .amenities {
+        font-size: 14px;
+    }
+    .amenities .icon {
+        width: 34px;
+    }
+    .amenities .icon img {
+        width: 18px;
+        height: 18px;
+    }
+    .amenities .icon::after {
+        height: 16px;
+        margin-left: 8px;
+    }
+    .amenities .list-name {
+        width: calc(100% - 34px);
+    }
+    .amenities-toggle {
+        margin-top: 16px;
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    .reservation-banner {
+        width: calc(100% - 80px);
+        min-height: 360px;
+        padding: 72px 24px;
+        margin: 80px auto;
+        background-image:
+            linear-gradient(rgba(37, 56, 85, 0.3), rgba(37, 56, 85, 0.3)),
+            url("../img/sp_room_page_images/12morino_night-hotel_cta_sp.png");
+    }
+    .reservation-banner-title {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+    .reservation-banner-text {
+        margin: 20px 0 32px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+    .reservation-banner .reserve-btn a {
+        width: 100%;
+        gap: 12px;
+        padding-inline: 8px;
+    }
+    .reservation-banner .reserve-btn p {
+        font-size: 13px;
+    }
+}
