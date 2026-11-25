@@ -165,7 +165,7 @@
 .reservation-banner {
     background-image:
         linear-gradient(rgba(37, 56, 85, 0.3), rgba(37, 56, 85, 0.3)),
-        url("../img/pc_room-page-images/morino-night-hotel-cta.png");
+        url("../img/morino-night-hotel-cta.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -193,117 +193,146 @@
     .room-images {
         overflow: hidden;
     }
+
     .room-content {
         padding-inline: 24px;
     }
+
     .room-reserve-btn a {
         padding-inline: 10px;
         gap: 8px;
     }
+
     .room-reserve-btn p {
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 767px) {
+
     .room-item,
     .room-item.list-left {
         flex-direction: column;
         align-items: stretch;
         margin-bottom: 64px;
     }
+
     .room-images {
         width: 100%;
         padding-right: 36px;
         overflow: hidden;
     }
+
     .room-images .slick-list {
         margin: 0;
         overflow: visible;
     }
+
     .room-images .slick-slide {
         margin: 0 24px 0 0;
     }
+
     .room-images picture,
     .room-images img {
         display: block;
         width: 100%;
     }
+
     .room-content {
         width: 100%;
         padding: 32px 40px 0;
     }
+
     .room-title {
         margin-bottom: 20px;
         font-size: 20px;
     }
+
     .room-info {
         margin-bottom: 28px;
         font-size: 14px;
         line-height: 1.8;
     }
+
     .room-info dt {
         width: 22%;
     }
+
     .room-info dd {
         width: 78%;
     }
+
     .room-reserve-btn p {
         font-size: 14px;
     }
+
     .room-reserve-btn a {
         padding: 12px;
     }
+
     .room-description {
         margin-top: 28px;
         font-size: 14px;
         line-height: 1.9;
     }
-    .room-list + .section-heading {
+
+    .room-list+.section-heading {
         margin-bottom: 32px;
     }
-    .room-list + .section-heading .section-heading-en {
+
+    .room-list+.section-heading .section-heading-en {
         max-width: 270px;
         margin: 0 auto;
     }
+
     .amenities-photo {
         display: block;
         margin-bottom: 52px;
     }
+
     .amenities-photo img {
         display: block;
         width: 100%;
     }
+
     .amenities-list_01,
     .amenities-list_02 {
         flex-direction: column;
     }
+
     .amenities-list-left,
     .amenities-list-right {
         width: 100%;
     }
+
     .amenities {
         font-size: 14px;
     }
+
     .amenities .icon {
         width: 34px;
     }
+
     .amenities .icon img {
         width: 18px;
         height: 18px;
     }
+
     .amenities .icon::after {
         height: 16px;
         margin-left: 8px;
     }
+
     .amenities .list-name {
         width: calc(100% - 34px);
     }
+
     .amenities-toggle {
         margin-top: 16px;
         padding: 12px 16px;
         font-size: 14px;
     }
+
     .reservation-banner {
         width: calc(100% - 80px);
         min-height: 360px;
@@ -313,20 +342,24 @@
             linear-gradient(rgba(37, 56, 85, 0.3), rgba(37, 56, 85, 0.3)),
             url("../img/sp_room_page_images/12morino_night-hotel_cta_sp.png");
     }
+
     .reservation-banner-title {
         font-size: 18px;
         line-height: 1.7;
     }
+
     .reservation-banner-text {
         margin: 20px 0 32px;
         font-size: 13px;
         line-height: 1.8;
     }
+
     .reservation-banner .reserve-btn a {
         width: 100%;
         gap: 12px;
         padding-inline: 8px;
     }
+
     .reservation-banner .reserve-btn p {
         font-size: 13px;
     }
